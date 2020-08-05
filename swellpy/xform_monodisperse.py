@@ -8,7 +8,7 @@ from matplotlib.patches import Circle
 from scipy.spatial import cKDTree
 from peakutils import peak
 import crepel
-from particle_system_box_xform import ParticleSystem2
+from xform_particle_system import ParticleSystem2
 
 
 class Monodisperse2(ParticleSystem2):
