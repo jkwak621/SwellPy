@@ -1,7 +1,7 @@
 import unittest
 import numpy.testing as npt
 from .monodisperse import *
-from .xform_monodisperse import *
+#from .xform_monodisperse import *
 
 """
 Test cases for particle suspension classes
