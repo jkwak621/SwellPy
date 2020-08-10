@@ -793,57 +793,57 @@ class Monodisperse2(ParticleSystem2):
             plt.ylabel('Curve')
             funcI = self.tag_curve_xform
             dataI = funcI(area_frac, 1, 1)
-            for i in m.centers: # scaling for memory readout by x-axis
+            for i in self.centers: # scaling for memory readout by x-axis
                 i[0] = i[0]*(scale_x/scale_y)
                 i[1] = i[1]*(scale_y/scale_x)
             funcX = self.tag_curve_xform
             dataX = funcX(area_frac, scale_x, scale_y)
-            for i in m.centers: #Transform centers back and Switches ratios for memory readout by y-axis
+            for i in self.centers: #Transform centers back and Switches ratios for memory readout by y-axis
                 i[0] = i[0]*((scale_y/scale_x)**2)
                 i[1] = i[1]*((scale_x/scale_y)**2)
             funcY = self.tag_curve_xform
             dataY = funcY(area_frac, scale_y, scale_x)
-            for i in m.centers: # Transform centers back
+            for i in self.centers: # Transform centers back
                 i[0] = i[0]*(scale_x/scale_y)
                 i[1] = i[1]*(scale_y/scale_x)
         elif (mode == 'rate'):
             plt.ylabel('Rate')
             funcI = self.tag_rate_xform
             dataI = funcI(area_frac, 1, 1)
-            for i in m.centers: # scaling for memory readout by x-axis
+            for i in self.centers: # scaling for memory readout by x-axis
                 i[0] = i[0]*(scale_x/scale_y)
                 i[1] = i[1]*(scale_y/scale_x)
             funcX = self.tag_rate_xform
             dataX = funcX(area_frac, scale_x, scale_y)
-            for i in m.centers: #Transform centers back
+            for i in self.centers: #Transform centers back
                 i[0] = i[0]*(scale_y/scale_x)
                 i[1] = i[1]*(scale_x/scale_y)
-            for i in m.centers: # Switches ratios for memory readout by y-axis
+            for i in self.centers: # Switches ratios for memory readout by y-axis
                 i[0] = i[0]*(scale_y/scale_x)
                 i[1] = i[1]*(scale_x/scale_y)
             funcY = self.tag_rate_xform
             dataY = funcY(area_frac, scale_y, scale_x)
-            for i in m.centers: # Transform centers back
+            for i in self.centers: # Transform centers back
                 i[0] = i[0]*(scale_x/scale_y)
                 i[1] = i[1]*(scale_y/scale_x)
         else:
             plt.ylabel('Count')
             funcI = self.tag_count_xform
             dataI = funcI(area_frac, 1, 1)
-            for i in m.centers: # scaling for memory readout by x-axis
+            for i in self.centers: # scaling for memory readout by x-axis
                 i[0] = i[0]*(scale_x/scale_y)
                 i[1] = i[1]*(scale_y/scale_x)
             funcX = self.tag_count_xform
             dataX = funcX(area_frac, scale_x, scale_y)
-            for i in m.centers: #Transform centers back
+            for i in self.centers: #Transform centers back
                 i[0] = i[0]*(scale_y/scale_x)
                 i[1] = i[1]*(scale_x/scale_y)
-            for i in m.centers: # Switches ratios for memory readout by y-axis
+            for i in self.centers: # Switches ratios for memory readout by y-axis
                 i[0] = i[0]*(scale_y/scale_x)
                 i[1] = i[1]*(scale_x/scale_y)
             funcY = self.tag_count_xform
             dataY = funcY(area_frac, scale_y, scale_x)
-            for i in m.centers: # Transform centers back
+            for i in self.centers: # Transform centers back
                 i[0] = i[0]*(scale_x/scale_y)
                 i[1] = i[1]*(scale_y/scale_x)
         plt.plot(area_frac, dataI)
