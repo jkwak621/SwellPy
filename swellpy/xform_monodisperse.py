@@ -763,7 +763,7 @@ class Monodisperse2(ParticleSystem2):
             dataY = funcY(area_frac, scale_y, scale_x)
             self.inv_transform_centers(scale_y, scale_x) #transform centers back
         else:
-            plt.ylabel('Count')
+            plt.ylabel('Fraction of Active Particles')
             funcI = self.tag_count_xform
             dataI = funcI(area_frac, 1, 1)
             #Transform for x-axis readout
@@ -827,7 +827,7 @@ class Monodisperse2(ParticleSystem2):
                 i[0] = i[0]*(scale_x/scale_y)
                 i[1] = i[1]*(scale_y/scale_x)
         else:
-            plt.ylabel('Frac of Active Particles')
+            plt.ylabel('Fraction of Active Particles')
             funcI = self.tag_count_xform
             dataI = funcI(area_frac, 1, 1)
             for i in self.centers: # scaling for memory readout by x-axis
